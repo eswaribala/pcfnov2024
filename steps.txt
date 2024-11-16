@@ -2,7 +2,8 @@ kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.5
 kubectl get pods --namespace cert-manager
 
 kubectl apply -f https://projectcontour.io/quickstart/contour.yaml
-
+tanzu package install cert-manager --package-name cert-manager.tanzu.vmware.com --namespace tanzu-packages --version <version>
+tanzu package install contour --package-name contour.tanzu.vmware.com --namespace tanzu-packages --version <version>
 tanzu package available list --namespace tanzu-package-repo-global | grep application-service
 
 
