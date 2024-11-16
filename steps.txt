@@ -1,0 +1,9 @@
+kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.5.3/cert-manager.yaml
+kubectl get pods --namespace cert-manager
+
+kubectl apply -f https://projectcontour.io/quickstart/contour.yaml
+
+kubectl get pods --namespace projectcontour
+kubectl apply -f config/crds/
+kubectl apply -f config/
+kubectl get pods
